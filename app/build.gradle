@@ -53,4 +53,7 @@ dependencies {
 
     // Retrofit 추가하기
     implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofitVersion}"
+
+    // circleImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

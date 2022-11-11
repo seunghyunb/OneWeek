@@ -1,18 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".src.main.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data></data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dedede"
+        tools:context=".src.main.MainActivity">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/main_background"
+                    android:paddingLeft="@dimen/content_margin_8"
+                    android:paddingTop="@dimen/content_margin_16"
+                    android:paddingBottom="@dimen/content_margin_16">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_main_poster"
+                        android:layout_width="140dp"
+                        android:layout_height="200dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/img_1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_title"
+                        style="@style/TextAppearance.AppCompat.MainInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_16"
+                        android:text="군도"
+                        android:textSize="24dp"
+                        app:layout_constraintBottom_toBottomOf="@id/img_main_poster"
+                        app:layout_constraintLeft_toRightOf="@id/img_main_poster"
+                        app:layout_constraintTop_toTopOf="@id/img_main_poster"
+                        app:layout_constraintVertical_bias="0.25" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_date"
+                        style="@style/TextAppearance.AppCompat.MainInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/content_margin_16"
+                        android:text="2014.07.23 개봉"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_main_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_main_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_genre"
+                        style="@style/TextAppearance.AppCompat.MainInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="액션 / 137 분"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_main_date"
+                        app:layout_constraintTop_toBottomOf="@id/tv_main_date" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_main_thumb_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/content_margin_16"
+                        android:layout_marginBottom="@dimen/content_margin_16"
+                        android:src="@drawable/ic_thumb_up"
+                        app:layout_constraintBottom_toBottomOf="@id/img_main_poster"
+                        app:layout_constraintLeft_toLeftOf="@id/tv_main_genre" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_thumb_up"
+                        style="@style/TextAppearance.AppCompat.MainInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_4"
+                        android:text="15"
+                        app:layout_constraintLeft_toRightOf="@id/img_main_thumb_up"
+                        app:layout_constraintTop_toTopOf="@id/img_main_thumb_up" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_main_thumb_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_16"
+                        android:src="@drawable/ic_thumb_up"
+                        app:layout_constraintLeft_toRightOf="@id/tv_main_thumb_up"
+                        app:layout_constraintTop_toTopOf="@id/img_main_thumb_up" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_thumb_down"
+                        style="@style/TextAppearance.AppCompat.MainInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_4"
+                        android:text="1"
+                        app:layout_constraintLeft_toRightOf="@id/img_main_thumb_down"
+                        app:layout_constraintTop_toTopOf="@id/img_main_thumb_down" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    style="@style/Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/content_margin_8">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="줄거리" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/content_margin_8"
+                        android:text="lorem" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/content_margin_8">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_director_actor"
+                        style="@style/TextHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="감독/출연"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_director_text"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/content_margin_8"
+                        android:text="감독"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_main_director_actor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_director"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_8"
+                        android:text="윤종빈"
+                        app:layout_constraintLeft_toRightOf="@id/tv_main_director_text"
+                        app:layout_constraintTop_toTopOf="@id/tv_main_director_text" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_actor_text"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/content_margin_8"
+                        android:text="출연"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_main_director_text" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_actor"
+                        style="@style/TextBody"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_8"
+                        android:text="하저우(도치), 강동원(조윤)"
+                        app:layout_constraintLeft_toRightOf="@id/tv_main_actor_text"
+                        app:layout_constraintTop_toTopOf="@id/tv_main_actor_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    style="@style/Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="@dimen/content_margin_8">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_main_line_review"
+                        style="@style/TextHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="한줄평"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_main_line_review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_review_selected" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/TextHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/content_margin_4"
+                            android:text="작성하기"
+                            android:textColor="#e44418" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_main_review_all"
+                        style="@style/TextHeader"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_line"
+                        android:text="모두 보기"
+                        android:textColor="@color/purple_500"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    style="@style/Container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/content_margin_8"
+                    android:paddingBottom="@dimen/content_margin_8"
+                    android:paddingLeft="@dimen/content_margin_16"
+                    android:paddingRight="@dimen/content_margin_16">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_facebook" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/content_margin_8"
+                        android:src="@drawable/ic_kakao" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#e44418"
+                        android:text="예매하기"
+                        android:layout_marginLeft="@dimen/content_margin_8"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

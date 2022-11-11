@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AppBar   -->
+    <dimen name="appbar_margin">16dp</dimen>
+
+    <!-- Content   -->
+    <dimen name="content_margin_4">4dp</dimen>
+    <dimen name="content_margin_8">8dp</dimen>
+    <dimen name="content_margin_16">16dp</dimen>
+
+    <!-- text   -->
+    <dimen name="text_header">20sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+</resources>

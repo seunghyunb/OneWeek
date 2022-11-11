@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/content_margin_8">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_item_review_line_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:civ_border_width="1dp"
+        android:src="@drawable/img_user1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_marginLeft="@dimen/content_margin_4"
+        android:id="@+id/txt_item_review_line_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kym71**"
+        app:layout_constraintLeft_toRightOf="@id/img_item_review_line_user"
+        app:layout_constraintTop_toTopOf="@id/img_item_review_line_user" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10분전"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="@id/txt_item_review_line_user"
+        app:layout_constraintTop_toBottomOf="@id/txt_item_review_line_user" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="적당히 재밌다."
+        app:layout_constraintLeft_toLeftOf="@id/txt_item_review_line_user"
+        app:layout_constraintTop_toBottomOf="@id/txt_item_review_line_time" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="추천"
+        app:layout_constraintLeft_toLeftOf="@id/txt_item_review_line_user"
+        app:layout_constraintTop_toBottomOf="@id/txt_item_review_line_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_like_count"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="@dimen/content_margin_4"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintLeft_toRightOf="@id/txt_item_review_line_like"
+        app:layout_constraintTop_toTopOf="@id/txt_item_review_line_like" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_separator"
+        android:layout_marginLeft="@dimen/content_margin_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="|"
+        app:layout_constraintLeft_toRightOf="@id/txt_item_review_line_like_count"
+        app:layout_constraintTop_toTopOf="@id/txt_item_review_line_like" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txt_item_review_line_report"
+        android:layout_marginLeft="@dimen/content_margin_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신고하기"
+        app:layout_constraintLeft_toRightOf="@id/txt_item_review_line_separator"
+        app:layout_constraintTop_toTopOf="@id/txt_item_review_line_like" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
