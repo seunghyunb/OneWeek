@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#dedede"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_margin_2"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/content_margin_16"
+            android:paddingTop="@dimen/content_margin_8"
+            android:paddingRight="@dimen/content_margin_16"
+            android:paddingBottom="@dimen/content_margin_8">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="군도" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/content_margin_8"
+                android:src="@drawable/ic_15" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/content_margin_4"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rtbar_review_write"
+                style="@style/Widget.AppCompat.RatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/content_margin_8"
+                android:rating="4.0"
+                android:stepSize="0.1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="평점을 입력해 주세요"
+                android:textColor="#9c9c9c" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_review_write"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginLeft="@dimen/content_margin_16"
+                android:layout_marginTop="@dimen/content_margin_8"
+                android:layout_marginRight="@dimen/content_margin_16"
+                android:background="@drawable/shape_review_write_edit"
+                android:gravity="left|top"
+                android:hint="100자 이내로 작성해주세요."
+                android:padding="@dimen/content_margin_8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/content_margin_8"
+                android:paddingRight="@dimen/content_margin_16"
+                android:paddingBottom="@dimen/content_margin_8">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_review_write_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/content_margin_8"
+                    android:background="@drawable/shape_btn_purple_line"
+                    android:text="@string/save" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_review_write_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_purple_line"
+                    android:text="@string/cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -8,4 +8,9 @@
 
     <string name="lorem_mini"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris maximus, metus non pretium tempor, arcu augue vulputate nibh, nec auctor ipsum nunc vel odio. Mauris malesuada eget ligula at facilisis. In non nisi sit amet tellus euismod lacinia. Nam convallis nisl in ante consectetur fermentum. Mauris id porttitor libero. Nullam felis sem, sagittis vitae leo vitae, auctor mollis mi. Ut quis nulla et dolor fringilla molestie sit amet tincidunt est. Mauris laoreet ipsum non consequat imperdiet. Vestibulum id suscipit libero, et dapibus metus. Curabitur non tellus fermentum elit fermentum mollis ut in mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo eros, scelerisque eu scelerisque ut, placerat nec sem.
         Sed finibus elit sit amet ante mollis, tincidunt sagittis justo maximus. Nam quis lectus eget est blandit aliquet.</string>
+
+    <string name="save">저 장</string>
+    <string name="cancel">취 소</string>
+    <string name="review">한줄평</string>
+    <string name="write">작성하기</string>
 </resources>
